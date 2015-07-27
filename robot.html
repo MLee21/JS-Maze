@@ -10,6 +10,21 @@
 <link rel="stylesheet" type="text/css" href="css/robotmazeinterface.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 
+<script>
+  m = new Maze(7,5);
+  m.setStart(1,1, "north");
+  m.setEnd(7,1);
+  m.setWall(1,1, "east");
+
+  var i = new RobotMazeInterface(null, m, "#page");
+  $(document).ready(function() {
+    i.render();
+  });
+
+</script>
+
+
+
 </head>
 <body>
 

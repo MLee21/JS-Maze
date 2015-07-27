@@ -27,12 +27,18 @@ Maze.prototype.setStart = function(x, y, orientation) {
     this.startX = x;
     this.startY = y;
     this.startOrientation = orientation;
-  }
+    return true;
+  } 
+  return false;
 }
 
 Maze.prototype.setEnd = function(x, y) {
+  if (!this.isInBounds(x,y)) {
+    return false;
+  }
   this.endX = x;
   this.endY = y;
+  return true;
 }
 
 Maze.prototype.setWall = function(x, y, direction) {
